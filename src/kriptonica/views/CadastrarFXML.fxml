@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kriptonica.controllers.CadastrarController">
+   <children>
+      <HBox alignment="CENTER_LEFT" minWidth="300.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="#616161" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-weight: bold; -fx-font-size: 1.5em;" text="Cadastrar Novo Usuário">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="lbNome" maxWidth="400.0" prefHeight="30.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+                  <TextField fx:id="lbEmail" maxWidth="400.0" prefHeight="30.0" promptText="E-mail" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+                  <DatePicker fx:id="lbDataNasc" maxWidth="400.0" prefHeight="30.0" promptText="Data de Nascimento" style="-fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+                  <PasswordField fx:id="lbSenha" maxWidth="400.0" prefHeight="30.0" promptText="Senha" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+                  <PasswordField fx:id="lbSenhaConfirmacao" maxWidth="400.0" onAction="#acao" prefHeight="30.0" promptText="Confirmar Senha" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+                  <HBox alignment="CENTER" maxWidth="400.0" onMouseClicked="#onActionEnviar" prefHeight="30.0" style="-fx-background-color: #5cb85c;" styleClass="cursor_hand">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-size: 16; -fx-font-weight: bold;" text="Enviar" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

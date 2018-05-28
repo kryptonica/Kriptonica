@@ -1,0 +1,45 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.my_buttom:hover {
+    -fx-background-color:  #45b245 !important;
+}
+
+.my_buttom:active {
+    -fx-background-color:  #49d749 !important;
+}
+
+.table_column {
+    -fx-background-color:  transparent;
+    -fx-border-color: #eeeeee;
+}
+
+.hover_border:hover {
+    -fx-border-color: #1b5e20;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-background-color: #42e475; 
+    -fx-cursor: hand;	
+}
+
+.cursor_hand {
+    -fx-cursor: hand;
+}
+
+.date-picker > .text-field {
+    -fx-background-color: #fff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+
+.date-picker:focused > .text-field,
+.date-picker > .text-field:focused {
+    -fx-background-color: #fafafa;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;    
+}
+
+.date-picker:focused {
+    -fx-border-color: #40c4ff;
+    -fx-border-radius: 0;
+}
