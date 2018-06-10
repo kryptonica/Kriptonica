@@ -44,7 +44,7 @@ Instalação
 ************
 
 - Crie um novo projeto e importe os arquivos.
-- Instale o GlassFish, Clone o projeto `KriptonicaEJB <https://github.com/kryptonica/kriptonicaEJB>`_.
+- Instale e configure o GlassFish, Clone o projeto `KriptonicaEJB <https://github.com/kryptonica/kriptonicaEJB>`_.
 - Instale o Mysql, recomendamos utilizar o `MAMP <https://www.mamp.info/en/downloads/>`_.
 - Crie um database e importe o arquivo `banco de dados.sql <http://git.uesb.br/kryptonica/mercado-moedas/blob/master/docs/banco%20de%20dados.sql>`_.
 - Construa e limpe o projeto Kriptonica, depois Implemente o KriptonicaEJB.
