@@ -1,5 +1,6 @@
 package kriptonica.controllers;
 
+import java.io.IOException;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,6 +10,8 @@ import javax.naming.NamingException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.DialogEvent;
@@ -17,6 +20,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import kriptonica.utils.AnimationValidationField;
 import javafx.scene.control.Control;
+import kriptonica.Main;
+import kriptonica.MetaData;
 import kriptonica.ejb.UsuarioRemote;
 import kriptonica.models.Usuario;
 import kriptonica.utils.EnumTelas;
@@ -39,16 +44,16 @@ public class CadastrarController {
     private PasswordField lbSenhaConfirmacao;
 
     @FXML
-    void acao(ActionEvent event) {
+    void acao(ActionEvent event) throws Exception {
         enviar();
     }
 
     @FXML
-    void onActionEnviar(MouseEvent event) {
+    void onActionEnviar(MouseEvent event) throws Exception {
         enviar();
     }
 
-    private void enviar() {
+    private void enviar() throws Exception {
         java.util.List<Control> controles = new ArrayList<>();
         StringBuilder error = new StringBuilder();
         if (lbNome.getText().isEmpty()) {
@@ -103,24 +108,14 @@ public class CadastrarController {
                 alert.setContentText("Usuário cadastrado!");
                 alert.initOwner(lbNome.getScene().getWindow());
                 alert.show();
-                limparCampos();
+                MetaData.tela = EnumTelas.TELA_LOGIN;
+                Parent root = FXMLLoader.load(getClass().getResource("/kriptonica/views/PrincipalFXML.fxml"));
+                Main.stage.getScene().setRoot(root);
             } catch (NamingException e) {
 
                 // TODO Auto-generated catch block
                 System.err.println("Erro na hora de salvar " + e.getMessage());
-            } catch (Exception e) {
-                // TODO Auto-generated catch block
-                System.err.println("Erro na hora de salvar" + e.getMessage());
             }
         }
     }
-
-    private void limparCampos() {
-        lbNome.clear();
-        lbEmail.clear();
-        lbDataNasc.setValue(null);
-        lbSenha.clear();
-        lbSenhaConfirmacao.clear();
-    }
-
 }

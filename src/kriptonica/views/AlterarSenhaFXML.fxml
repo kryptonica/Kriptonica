@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kriptonica.controllers.AlterarSenhaController">
+   <children>
+      <HBox alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-fill: #485460; -fx-font-weight: bold; -fx-font-size: 2em;" text="Alterar senha" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: #fff;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <Text fill="#cccccc" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-size: 16; -fx-fill: #485460; -fx-font-weight: bold;" text="Senha atual:" />
+                  <PasswordField fx:id="tfSenhaAtual" promptText="Senha atual" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Text fill="#cccccc" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-size: 16; -fx-fill: #485460; -fx-font-weight: bold;" text="Nova senha:" />
+                  <PasswordField fx:id="tfNovaSenha" promptText="Senha atual" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+               </children>
+            </VBox>
+            <VBox layoutX="30.0" layoutY="94.0" spacing="5.0">
+               <children>
+                  <Text fill="#cccccc" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-size: 16; -fx-fill: #485460; -fx-font-weight: bold;" text="Confirmar nova senha:" />
+                  <PasswordField fx:id="tfConfirmarNovaSenha" onKeyPressed="#onPressedEnviar" promptText="Senha atual" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" maxWidth="-Infinity" onMouseClicked="#onActionEnviar" style="-fx-background-color: #5cb85c; -fx-background-radius: 0.5em;" styleClass="cursor_hand">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-size: 16; -fx-font-weight: bold;" text="Enviar" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <effect>
+            <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+</VBox>

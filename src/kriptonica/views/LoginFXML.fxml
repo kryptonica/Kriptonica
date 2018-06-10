@@ -23,7 +23,7 @@
                   <Text fill="#616161" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-weight: bold; -fx-font-size: 1.5em;" text="Olá! Para continuar, informe seus dados:" />
                   <TextField fx:id="lbEmail" maxWidth="400.0" prefHeight="30.0" promptText="E-mail" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
                   <PasswordField fx:id="lbSenha" maxWidth="400.0" onAction="#onButtomEntrar" prefHeight="30.0" promptText="Senha" style="-fx-background-color: transparent; -fx-border-color: #e0e0e0; -fx-border-width: 2px;" />
-                  <HBox alignment="CENTER" maxWidth="400.0" onMouseClicked="#onButtomEntrar" prefHeight="30.0" style="-fx-background-color: #5cb85c;" styleClass="cursor_hand">
+                  <HBox alignment="CENTER" maxWidth="400.0" onMouseClicked="#buttomEntrar" prefHeight="30.0" style="-fx-background-color: #5cb85c;" styleClass="cursor_hand">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Raleway Light; -fx-font-size: 16; -fx-font-weight: bold;" text="Entrar" />
                      </children>
